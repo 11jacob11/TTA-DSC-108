@@ -3,7 +3,7 @@ library(tidyverse)
 install.packages("reshape2")
 library(reshape2)
 
-housing = read.csv("C:/Users/jacob/OneDrive/Boop-Temp/housing.csv")
+housing = read.csv("C:/Users/jacob/OneDrive/Boop-Temp/TTA-DSC-108/housing.csv")
 head(housing)
 summary(housing)
 par(mfrow=c(2,5))
@@ -100,7 +100,7 @@ train_x = train[, names(train) != "median_house_value"]
 head(train_y)
 head(train_x)
 
-rf_model = randmForest(train_x, y = train_y , ntree = 500, importance = TRUE)
+rf_model = randomForest(train_x, y = train_y , ntree = 500, importance = TRUE)
 
 names(rf_model)
 
